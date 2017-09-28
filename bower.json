@@ -8,6 +8,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-beta",
-    "popper.js": "^1.12.3"
+    "popper.js": "^1.12.3",
+    "components-font-awesome": "^4.7.0"
   }
 }

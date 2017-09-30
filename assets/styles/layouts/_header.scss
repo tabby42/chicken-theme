@@ -1,0 +1,25 @@
+header {
+	min-height: 100px;
+}
+
+ul.nav li.dropdown:hover ul.dropdown-menu{
+	display: block;
+	margin-top: 0;
+}
+
+.nav {
+	margin: 0 auto;
+	li {
+		padding: 10px 20px;
+	}
+}
+
+
+nav {
+	background: theme-color("primary-lightened");
+}
+
+
+.fixed-top {
+	top: 50px;
+}

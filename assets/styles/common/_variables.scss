@@ -6,11 +6,20 @@ $sidebar-sm-columns:    4;
 
 
 //Colors
-$theme-colors: (
-  $primary: #53b8a9;
-  $primary-lightened: scale-color($primary, $lightness: 70%);
-	
+$primary: #53b8a9;
+$primary-lightened: scale-color($primary, $lightness: 70%);
+$secondary: #594491;
+$secondary-lightened: scale-color($secondary, $lightness: 70%);
+$light: #f1e9d7;
+
+$chickentheme-colors: (
+  primary: $primary,
+  primary-lightened: $primary-lightened,
+  secondary: $secondary,
+  secondary-lightened: $secondary-lightened,
+  light: $light
 );
+
 
 //Fonts
 

@@ -1,0 +1,3 @@
+@function chickentheme-color($key: "primary") {
+  @return map-get($chickentheme-colors, $key);
+}

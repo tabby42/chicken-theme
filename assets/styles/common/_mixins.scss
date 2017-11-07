@@ -1,0 +1,15 @@
+@mixin diamond-shape ($bg, $side) {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg);
+    background: chickentheme-color($bg);
+    margin-top: 7px;
+    @if $side == left {
+        margin-left: -18px;
+    }
+    @else {
+        margin-left: 10px;
+    }
+}

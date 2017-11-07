@@ -1,3 +1,9 @@
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/35080f");
+
+  
+@font-face {font-family: 'PrioriSansOT-Bold';src: url('../fonts/35080F_0_0.eot');src: url('../fonts/35080F_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/35080F_0_0.woff2') format('woff2'),url('../fonts/35080F_0_0.woff') format('woff'),url('../fonts/35080F_0_0.ttf') format('truetype');}
+
 @import "common/variables";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
@@ -5,6 +11,7 @@
 @import "../../bower_components/bootstrap/scss/bootstrap.scss";
 // endbower
 
+@import "common/mixins";
 @import "common/functions";
 @import "common/global";
 @import "components/buttons";

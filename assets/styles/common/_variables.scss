@@ -3,7 +3,7 @@ $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
 //Spacing
-
+$section-padding: 4rem 0;
 
 //Colors
 $primary: #53b8a9;
@@ -11,6 +11,7 @@ $primary-lightened: scale-color($primary, $lightness: 70%);
 $secondary: #594491;
 $secondary-lightened: scale-color($secondary, $lightness: 70%);
 $light: #f1e9d7;
+$white: #fff;
 
 $chickentheme-colors: (
   primary: $primary,
@@ -20,9 +21,21 @@ $chickentheme-colors: (
   light: $light
 );
 
-
 //Fonts
+$font-family-sans-serif: "Open Sans", sans-serif;
+$font-weight-light: 400;
+$text-font-size: 14px;
+//$font-size-base: 12px;
 
+$headings-font-family: "PrioriSansOT-Bold", sans-serif;
+$headings-font-weight: normal;
 
+$h3-font-size: 1.25rem;
+
+$letterspacing-default: 1px;
 //Links
 $link-hover-decoration: none;
+
+//Transitions
+$transition-default: all 1s ease;
+$transition-short: all 0.3s ease;

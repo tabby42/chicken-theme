@@ -1,3 +1,98 @@
+body {
+    background-color: chickentheme-color("primary-lightened");
+}
+
 .wrap {
 	padding-top: 50px;
+}
+
+//Headings and Paragraphs
+h2 {
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: $h3-font-size;
+}
+
+P {
+    font-family: $font-family-sans-serif;
+    font-weight: $font-weight-light;
+    line-height: $line-height-base;
+    font-size: $text-font-size;
+}
+
+//Links
+a {
+    
+    
+}
+
+
+//common Elements
+.teal-bg {
+    padding: $section-padding;
+    background-color: chickentheme-color("primary-lightened");
+    p, h2, h3 {
+        color: chickentheme-color("secondary");
+    }
+    h3 {
+        &:before {
+            @include diamond-shape( secondary, left);
+        }
+        &:after {
+            @include diamond-shape( secondary, right);
+        }
+    }
+}
+
+.violet-bg {
+    padding: $section-padding;
+    background-color: chickentheme-color("secondary");
+    p, h2, h3, a {
+        color: chickentheme-color("secondary-lightened");
+    }
+    h3 {
+        &:before {
+            @include diamond-shape( secondary-lightened, left);
+        }
+        &:after {
+            @include diamond-shape( secondary-lightened, right);
+        }
+    }
+    a:not(.small-link) {
+        padding: 1px;
+        font-family: $headings-font-family;
+        font-size: $h3-font-size;
+        text-transform: uppercase;
+        border-bottom: 1px solid chickentheme-color("secondary-lightened");
+        letter-spacing: $letterspacing-default;
+        transition: $transition-short;
+        &:hover, &:focus {
+            color: $white;
+        }
+    }
+   
+}
+
+.vc_row-has-fill {
+    background-size: 120%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+//Homeslider
+.slidertext {
+    text-align: center;
+    text-transform: uppercase;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate3d(-50%,-50%, 0);
+    color: $white; 
+    > span {
+        text-transform: none;
+        font-size: 30px !important;
+        font-family: $headings-font-family;
+        letter-spacing: $letterspacing-default !important;
+    }
 }

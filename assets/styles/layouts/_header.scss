@@ -1,22 +1,59 @@
 header {
 	min-height: 100px;
     nav {
-        background: chickentheme-color("primary-lightened");
+        background: chickentheme-color("primary");
+        transition: all 0.3s ease;
         &.fixed-top {
-            top: 50px;
+            //top: 50px;
+            padding-top: 100px;
+        }
+        &.navbar {
+            padding-bottom: 0;
         }
         .nav {
             margin: 0 auto;
+            margin-right: 0;
             li {
                 padding: 10px 20px;
+                font-size: $h3-font-size;
                 a {
-                    color: chickentheme-color("secondary");
+                    color: chickentheme-color("primary-lightened");
+                    font-family: $headings-font-family;
+                    letter-spacing: $letterspacing-default;
+                    &.dropdown-toggle:after {
+                        top: 3px;
+                        position: relative;
+                    }
                 }
             }
         }
         ul.nav li.dropdown:hover ul.dropdown-menu{
             display: block;
             margin-top: 0;
+        }
+        .navbar-brand {
+            position: absolute;
+            top: -7px;
+            left: 0;
+            img {
+                max-height: 155px;
+                position: absolute;
+                transition: $transition-default;
+                &.chickenlogo:hover {
+                    opacity: 0;
+                }
+            }
+        }
+        &.stickynav {
+            transform: translateY(-100px);
+            .navbar-brand {
+                opacity: 0;
+                transition: all 0.5s ease;
+            }
+            .nav {
+                transition: $transition-default;
+                margin-right: auto;
+            }
         }
     }
 }

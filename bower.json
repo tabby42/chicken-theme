@@ -10,6 +10,8 @@
     "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-beta",
     "popper.js": "^1.12.3",
     "components-font-awesome": "^4.7.0",
-    "slider-pro": "^1.2.2"
+    "slider-pro": "^1.2.2",
+    "scrollreveal": "^3.3.6",
+    "sticky-kit": "^1.1.2"
   }
 }

@@ -13,3 +13,51 @@
   @extend .btn;
   @extend .btn-secondary;
 }
+
+.nf-form-wrap {
+   .field-wrap button, 
+   .field-wrap input[type=button],
+   .field-wrap input[type=submit] {
+        width: 100%;
+        font-family: $headings-font-family;
+        font-size: $h3-font-size;
+        text-transform: uppercase;
+        background: chickentheme-color("secondary");
+        border: 2px solid chickentheme-color("secondary-lightened");
+        color: chickentheme-color("secondary-lightened");
+        transition: $transition-short;
+        &:hover, &:focus {
+          color: $white;
+          border-color: $white;
+        }
+    } 
+    .nf-field-element input, 
+    .nf-field-element select, 
+    .nf-field-element textarea {
+        background: chickentheme-color("secondary-lightened");
+        min-height: 45px;
+        outline: 0;
+        box-shadow: none;
+        border: 0;
+        padding: 8px;
+        color: chickentheme-color("secondary");
+        font-size: $text-font-size;
+    }
+    .nf-error .ninja-forms-field {
+        border: 1px solid $white;
+    }
+    .nf-error-msg, 
+    .ninja-forms-req-symbol {
+        color: chickentheme-color("secondary-lightened");
+        font-size: $text-font-size;
+    }
+    .nf-form-fields-required {
+        font-size: $text-font-size;
+        padding-bottom: 10px;
+        color: chickentheme-color("secondary-lightened");
+    }
+    ::-webkit-input-placeholder {
+        color: $white;
+    }
+}
+

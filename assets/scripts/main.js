@@ -10,6 +10,8 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
+
+
 (function($) {
 
   // Use this variable to set up the common and page specific functions. If you
@@ -19,6 +21,11 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        //alert('hu');
+        console.log("main");
+          
+          
+        
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -77,3 +84,4 @@
   $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.
+

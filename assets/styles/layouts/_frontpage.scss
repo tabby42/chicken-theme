@@ -9,16 +9,17 @@
 
 .slidertext {
     text-align: center;
-    text-transform: uppercase;
     top: 50% !important;
     left: 50% !important;
     transform: translate3d(-50%,-50%, 0);
     color: $white; 
-    > span {
-        text-transform: none;
-        font-size: 30px !important;
-        font-family: $headings-font-family;
-        letter-spacing: $letterspacing-default !important;
+    text-transform: none;
+    font-size: 24px !important;
+    font-family: $headings-font-family;
+    letter-spacing: $letterspacing-default !important;
+    h1 {
+        text-transform: uppercase;
+        line-height: 1 !important;
     }
 }
 
@@ -27,10 +28,16 @@
     &:before {
         @include bg-image-frontpage(350px, 800px, left, 0, 0);
         background-image: url(../../dist/images/gekrakzel-links2.png);
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
     }
     &:after {
         @include bg-image-frontpage(350px, 800px, right, 0, 110px);
         background-image: url(../../dist/images/gekrakzel-rechts.png);
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
     }
 }
 
@@ -39,10 +46,16 @@
     &:before {
         @include bg-image-frontpage(350px, 1000px, left, -50px, 200px);
         background-image: url(../../dist/images/gekrakzel-links.png);
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
     }
     &:after {
         @include bg-image-frontpage(350px, 1200px, right, 0, 600px);
         background-image: url(../../dist/images/gekrakzel-rechts2.png);
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
     }
 }
 
@@ -51,10 +64,16 @@
     &:before {
         @include bg-image-frontpage(350px, 1000px, left, 50px, 1125px);
         background-image: url(../../dist/images/diamant-flieder.png);
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
     }
     &:after {
         @include bg-image-frontpage(350px, 1000px, right, 50px, 2000px);
         background-image: url(../../dist/images/maske-flieder.png);
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
     }
 }
 

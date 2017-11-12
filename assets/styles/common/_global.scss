@@ -1,8 +1,12 @@
 body {
     &.home {
         background-color: chickentheme-color("primary-lightened");
+        transition: $transition-short;
         .wrap {
             padding-top: 50px;
+        }
+        &.sliderbg {
+            background-color: chickentheme-color("secondary-lightened");
         }
     }
     &:not(.home) {
@@ -23,8 +27,10 @@ body {
         }
         article, .gmedia_gallery {
             @include make-col-sm(8);
-            @include make-col-offsets(2);
             padding-bottom: 50px;
+            @include media-breakpoint-up(sm) {
+                @include make-col-offsets(2);
+            }
         }
     }
     &.single {

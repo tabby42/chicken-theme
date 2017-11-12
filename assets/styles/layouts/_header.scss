@@ -52,6 +52,9 @@ header {
                  @include media-breakpoint-down(md) {
                     max-height: 153px;
                 }
+                @include media-breakpoint-down(xs) {
+                    
+                }
             }
         }
         &.stickynav {
@@ -63,6 +66,11 @@ header {
             .nav {
                 transition: $transition-default;
                 margin-right: auto;
+            }
+            .navbar-toggler {
+                @include media-breakpoint-down (md) {
+                    margin-bottom: 5px !important;
+                }
             }
         }
     }

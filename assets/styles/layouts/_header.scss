@@ -24,7 +24,14 @@ header {
                         top: 3px;
                         position: relative;
                     }
+                    &:hover, &:focus {
+                        color: $white;
+                    }
                 }
+            }
+            @include media-breakpoint-down(md) {
+                display: block;
+                text-align: right;
             }
         }
         ul.nav li.dropdown:hover ul.dropdown-menu{
@@ -42,6 +49,9 @@ header {
                 &.chickenlogo:hover {
                     opacity: 0;
                 }
+                 @include media-breakpoint-down(md) {
+                    max-height: 153px;
+                }
             }
         }
         &.stickynav {
@@ -55,6 +65,13 @@ header {
                 margin-right: auto;
             }
         }
+    }
+    .navbar-light .navbar-toggler {
+        margin: 0 auto;
+        margin-right: 0;
+        outline: 0;
+        margin-bottom: 13px !important;
+        border: 0;
     }
 }
 

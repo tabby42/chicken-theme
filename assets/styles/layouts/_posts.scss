@@ -1,1 +1,28 @@
 //Posts
+.entry-summary {
+    .more-link {
+        display: inline-block;
+        margin-top: 10px;
+        font-family: $headings-font-family;
+        font-size: $h3-font-size;
+        line-height: 1;
+        text-transform: uppercase;
+        color: chickentheme-color("secondary");
+        border-bottom: 1px solid chickentheme-color("secondary");
+        letter-spacing: $letterspacing-default;
+        transition: $transition-short;
+        &:hover, &:focus {
+            color: chickentheme-color("secondary-lightened");
+            border-color: chickentheme-color("secondary-lightened");
+        }
+    }
+}
+
+.entry-title {
+    a {
+        color: chickentheme-color("secondary");
+        &:hover, &:focus {
+           border-bottom: 1px solid chickentheme-color("secondary"); 
+        }
+    }
+}

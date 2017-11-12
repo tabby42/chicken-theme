@@ -1,1 +1,20 @@
 //Pages
+.gmedia_gallery .gmPhantom_LabelInside .gmPhantom_ThumbLabel, 
+.gmedia_gallery .gmPhantom_LabelHover .gmPhantom_ThumbLabel {
+    background: chickentheme-color("secondary");
+}
+
+.gmedia_gallery .gmPhantom_LabelHover .gmPhantom_ThumbLabel .gmPhantom_ThumbLabel_title {
+    text-align: center;
+    font-family: $headings-font-family;
+    font-size: $h3-font-size;
+     &:before {
+        @include diamond-shape( light, left);
+        margin-top: 4px;
+    }
+    &:after {
+        @include diamond-shape( light, right);
+        margin-top: 4px;
+        
+    }
+}

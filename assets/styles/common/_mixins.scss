@@ -13,3 +13,40 @@
         margin-left: 10px;
     }
 }
+
+@mixin bg-image-frontpage ($width, $height, $side, $side-amount, $top) {
+    content: '';
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: $height;
+    width: $width;
+    top: $top;
+    @if $side == left {
+       left: $side-amount;
+    }
+    @else {
+        right: $side-amount;
+    }
+}
+
+@mixin make-col-sm( $cols ) {
+	@include make-col-ready();
+	@media (min-width: #{map-get( $grid-breakpoints, sm )}) {
+		@include make-col( $cols );
+	}
+}
+
+@mixin make-col-offsets( $cols... ) {
+	@for $i from 1 through length( $grid-breakpoints ) {
+		@if length( $cols ) >= $i {
+			@media ( min-width: #{map-get( $grid-breakpoints, nth( map-keys( $grid-breakpoints ), $i ) )} ) {
+				margin-left: percentage( nth( $cols, $i ) / $grid-columns );
+			}
+		} @else {
+			@media ( min-width: #{map-get( $grid-breakpoints, nth( map-keys( $grid-breakpoints ), $i ) )} ) {
+				margin-left: percentage( nth( $cols, length( $cols ) ) / $grid-columns );
+			}
+		}
+	}
+}

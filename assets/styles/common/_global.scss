@@ -1,18 +1,66 @@
 body {
-    background-color: chickentheme-color("primary-lightened");
+    &.home {
+        background-color: chickentheme-color("primary-lightened");
+        .wrap {
+            padding-top: 50px;
+        }
+    }
+    &:not(.home) {
+        background-color: chickentheme-color("light");
+        .wrap {
+            padding-top: 50px;
+            padding-bottom: 100px;
+        }
+        .main {
+            color: chickentheme-color("secondary");
+            text-align: center;
+            padding-right: 0;
+            padding-left: 0;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        article, .gmedia_gallery {
+            @include make-col-sm(8);
+            @include make-col-offsets(2);
+            padding-bottom: 50px;
+        }
+    }
+    &.single {
+        .main {
+            padding-top: 100px;
+        }
+    }
 }
 
-.wrap {
-	padding-top: 50px;
-}
+
 
 //Headings and Paragraphs
-h2 {
+h1 {
     text-transform: uppercase;
+    font-size: $h1-font-size;
 }
 
-h3 {
+h2 {
+    text-transform: uppercase;
+    font-size: $h2-font-size;
+}
+
+h3, time.updated {
     font-size: $h3-font-size;
+    font-family: $headings-font-family;
+}
+
+time.updated {
+     &:before {
+        @include diamond-shape( secondary, left);
+         margin-top: 9px;
+    }
+    &:after {
+        @include diamond-shape( secondary, right);
+        margin-top: 9px;
+    }
 }
 
 P {
@@ -20,6 +68,16 @@ P {
     font-weight: $font-weight-light;
     line-height: $line-height-base;
     font-size: $text-font-size;
+}
+
+.page-header {
+    margin-bottom: 75px;
+    color: chickentheme-color("secondary-lightened");
+    background-color: chickentheme-color("secondary");
+    padding: 50px 0;
+    h1 {
+        margin-bottom: 0;
+    }
 }
 
 //Links
@@ -72,7 +130,12 @@ a {
             color: $white;
         }
     }
-   
+    a.small-link {
+        text-decoration: underline;
+        &:hover, &:focus {
+            color: $white;
+        }
+    }
 }
 
 .vc_row-has-fill {
@@ -81,18 +144,8 @@ a {
     background-repeat: no-repeat;
 }
 
-//Homeslider
-.slidertext {
-    text-align: center;
-    text-transform: uppercase;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate3d(-50%,-50%, 0);
-    color: $white; 
-    > span {
-        text-transform: none;
-        font-size: 30px !important;
-        font-family: $headings-font-family;
-        letter-spacing: $letterspacing-default !important;
-    }
+.wp-post-image {
+    margin-bottom: 20px;
 }
+
+

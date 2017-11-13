@@ -6,6 +6,9 @@ header {
         &.fixed-top {
             //top: 50px;
             padding-top: 100px;
+            @include media-breakpoint-down(xs) {
+                padding-top: 170px;
+            }
         }
         &.navbar {
             padding-bottom: 0;
@@ -42,6 +45,10 @@ header {
             position: absolute;
             top: -7px;
             left: 0;
+            @include media-breakpoint-down(xs) {
+                width: 100%;
+                height: auto;
+            }
             img {
                 max-height: 155px;
                 position: absolute;
@@ -53,7 +60,9 @@ header {
                     max-height: 153px;
                 }
                 @include media-breakpoint-down(xs) {
-                    
+                    max-height: initial !important;
+                    width: 100%;
+                    height: auto;
                 }
             }
         }
@@ -71,6 +80,9 @@ header {
                 @include media-breakpoint-down (md) {
                     margin-bottom: 5px !important;
                 }
+            }
+            @include media-breakpoint-down(xs) {
+                padding-top: 110px;
             }
         }
     }

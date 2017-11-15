@@ -12,6 +12,7 @@ $j(document).ready(function( $ ) {
       }
     });
     
+    //smooth scroll für Sprungmarkenmenü
     $('.menu-item > a[href*=#]').click(function() {
     if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
             var $target = $(this.hash);
@@ -23,4 +24,10 @@ $j(document).ready(function( $ ) {
             }
         }
     });
+    
+    $('.mobile-slider').flexslider({
+        animation: "slide",
+        animationSpeed: 300,
+        slideshowSpeed: 3000
+      });
 });

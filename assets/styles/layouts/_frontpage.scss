@@ -5,6 +5,30 @@
             display: none;
         }
     }
+    .hidden-sm-up {
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+}
+
+.mobile-slider {
+    background: chickentheme-color("primary");
+    height: 60vh;
+    margin: 0 auto;
+    .slides {
+        height: 60vh;
+    }
+    li {
+        font-family: $headings-font-family;
+        color: $white;
+        font-size: $h1-font-size;
+        text-transform: none;
+        text-align: center;
+        line-height: 1;
+        max-width: 100%;
+        margin-top: 90px;
+    }
 }
 
 .slidertext {

@@ -60,7 +60,6 @@ header {
                     max-height: 153px;
                 }
                 @include media-breakpoint-down(xs) {
-                    max-height: initial !important;
                     width: 100%;
                     height: auto;
                 }

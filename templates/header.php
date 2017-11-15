@@ -4,8 +4,8 @@
       <div class="container-fluid">
           <a class="navbar-brand js-scroll-trigger" href="<?= esc_url(home_url('/')); ?>">
               
-              <img src="/wordpress/wp-content/themes/chicken-theme/assets/images/logo2.png" alt="Chickenpage"/>
-              <img src="/wordpress/wp-content/themes/chicken-theme/assets/images/logo1.png" class="chickenlogo" alt="Chickenpage"/>
+              <img src="<?php echo get_template_directory_uri();?>/dist/images/logo2.png" alt="Chickenpage"/>
+              <img src="<?php echo get_template_directory_uri();?>/dist/images/logo1.png" class="chickenlogo" alt="Chickenpage"/>
           </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>

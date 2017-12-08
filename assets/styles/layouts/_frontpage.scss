@@ -74,14 +74,14 @@
     &:before {
         @include bg-image-frontpage(350px, 800px, left, 0, 0);
         background-image: url(../../dist/images/gekrakzel-links2.png);
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             display: none;
         }
     }
     &:after {
         @include bg-image-frontpage(350px, 800px, right, 0, 110px);
         background-image: url(../../dist/images/gekrakzel-rechts.png);
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             display: none;
         }
     }
@@ -92,14 +92,14 @@
     &:before {
         @include bg-image-frontpage(350px, 1000px, left, -50px, 200px);
         background-image: url(../../dist/images/gekrakzel-links.png);
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             display: none;
         }
     }
     &:after {
         @include bg-image-frontpage(350px, 1200px, right, 0, 600px);
         background-image: url(../../dist/images/gekrakzel-rechts2.png);
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             display: none;
         }
     }
@@ -110,14 +110,14 @@
     &:before {
         @include bg-image-frontpage(350px, 1000px, left, 50px, 1125px);
         background-image: url(../../dist/images/diamant-flieder.png);
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             display: none;
         }
     }
     &:after {
         @include bg-image-frontpage(350px, 1000px, right, 50px, 2000px);
         background-image: url(../../dist/images/maske-flieder.png);
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             display: none;
         }
     }

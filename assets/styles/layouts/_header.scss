@@ -1,10 +1,11 @@
 header {
-	min-height: 100px;
+    min-height: 100px;
     nav {
         background: chickentheme-color("primary");
+        -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease;
         &.fixed-top {
-            //top: 50px;
+            /*top: 50px;*/
             padding-top: 100px;
             @include media-breakpoint-down(xs) {
                 padding-top: 170px;
@@ -40,6 +41,15 @@ header {
         ul.nav li.dropdown:hover ul.dropdown-menu{
             display: block;
             margin-top: 0;
+            border-radius: 0;
+            border: 0;
+            background-color: chickentheme-color("light");
+            li a {
+                color: chickentheme-color("secondary");
+                &:hover, &:focus {
+                    opacity: .7;
+                }
+            }
         }
         .navbar-brand {
             position: absolute;
@@ -52,6 +62,7 @@ header {
             img {
                 max-height: 155px;
                 position: absolute;
+                -webkit-transition: $transition-default;
                 transition: $transition-default;
                 &.chickenlogo:hover {
                     opacity: 0;
@@ -66,12 +77,15 @@ header {
             }
         }
         &.stickynav {
-            transform: translateY(-100px);
+            -webkit-transform: translateY(-100px);
+                    transform: translateY(-100px);
             .navbar-brand {
                 opacity: 0;
+                -webkit-transition: all 0.5s ease;
                 transition: all 0.5s ease;
             }
             .nav {
+                -webkit-transition: $transition-default;
                 transition: $transition-default;
                 margin-right: auto;
             }

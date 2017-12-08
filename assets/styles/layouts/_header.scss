@@ -8,7 +8,10 @@ header {
             /*top: 50px;*/
             padding-top: 100px;
             @include media-breakpoint-down(xs) {
-                padding-top: 170px;
+                padding-top: 112px;
+            }
+            @media screen and (max-width: 400px) {
+                padding-top: 72px;
             }
         }
         &.navbar {
@@ -16,9 +19,9 @@ header {
         }
         .nav {
             margin: 0 auto;
-            margin-right: 0;
+            margin-right: -20px;
             li {
-                padding: 10px 20px;
+                padding: 10px 9px;
                 font-size: $h3-font-size;
                 a {
                     color: chickentheme-color("primary-lightened");
@@ -55,7 +58,7 @@ header {
                 top: 20px;
                 right: 130px;
             }
-    }
+        }
         .navbar-brand {
             position: absolute;
             top: -7px;
@@ -69,6 +72,18 @@ header {
                 position: absolute;
                 -webkit-transition: $transition-default;
                 transition: $transition-default;
+                &:first-child {
+                    max-height: 154px;
+                    @include media-breakpoint-down(md) {
+                        max-height: 152px;
+                    }
+                     @include media-breakpoint-down(xs) {
+                        max-height: 164px;
+                    }
+                    @media screen and (max-width: 400px) {
+                        max-height: 124px;
+                    }
+                }
                 &.chickenlogo:hover {
                     opacity: 0;
                 }
@@ -78,6 +93,9 @@ header {
                 @include media-breakpoint-down(xs) {
                     max-height: 165px;
                    
+                }
+                @media screen and (max-width: 400px) {
+                    max-height: 125px;
                 }
             }
         }
@@ -104,7 +122,7 @@ header {
             }
         }
         @include media-breakpoint-down(xs) {
-            background: chickentheme-color("secondary");
+            /*background: chickentheme-color("secondary");*/
             
         }
     }

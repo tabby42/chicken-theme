@@ -18,7 +18,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 60vh;
+    height: 400px;
     margin: 0 auto;
     position: relative;
     .slides {
@@ -34,7 +34,7 @@
         max-width: 100%;
         margin-top: 150px;
         @include media-breakpoint-down(xs) {
-            margin-top: 200px;
+            margin-top: 170px;
         }
         @media screen and (max-width: 400px) {
             margin-top: 165px;

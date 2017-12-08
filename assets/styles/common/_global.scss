@@ -1,9 +1,13 @@
 body {
     &.home {
         background-color: chickentheme-color("primary-lightened");
+        -webkit-transition: $transition-short;
         transition: $transition-short;
         .wrap {
             padding-top: 50px;
+            @media screen and (max-width: 400px) {
+                padding-top: 22px;
+            }
         }
         &.sliderbg {
             background-color: chickentheme-color("secondary-lightened");
@@ -14,6 +18,9 @@ body {
         .wrap {
             padding-top: 50px;
             padding-bottom: 100px;
+             @media screen and (max-width: 400px) {
+                padding-top: 22px;
+            }
         }
         .main {
             color: chickentheme-color("secondary");
@@ -40,9 +47,7 @@ body {
     }
 }
 
-
-
-//Headings and Paragraphs
+/*Headings and Paragraphs*/
 h1 {
     text-transform: uppercase;
     font-size: $h1-font-size;
@@ -86,14 +91,14 @@ P {
     }
 }
 
-//Links
+/*Links*/
 a {
     
     
 }
 
 
-//common Elements
+/*common Elements*/
 .teal-bg {
     padding: $section-padding;
     background-color: chickentheme-color("primary-lightened");
@@ -131,6 +136,7 @@ a {
         text-transform: uppercase;
         border-bottom: 1px solid chickentheme-color("secondary-lightened");
         letter-spacing: $letterspacing-default;
+        -webkit-transition: $transition-short;
         transition: $transition-short;
         &:hover, &:focus {
             color: $white;

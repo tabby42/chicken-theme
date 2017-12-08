@@ -50,7 +50,12 @@ header {
                     opacity: .7;
                 }
             }
-        }
+            @include media-breakpoint-down(md) {
+                left: auto;
+                top: 20px;
+                right: 130px;
+            }
+    }
         .navbar-brand {
             position: absolute;
             top: -7px;

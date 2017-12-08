@@ -1,4 +1,4 @@
-//Homeslider
+/*Homeslider*/
 #homeslider {
     .hidden-sm-down {
         @include media-breakpoint-down(sm) {
@@ -14,8 +14,13 @@
 
 .mobile-slider {
     background: chickentheme-color("primary");
+    background-image: url(../../dist/images/start-mobil.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     height: 60vh;
     margin: 0 auto;
+    position: relative;
     .slides {
         height: 60vh;
     }
@@ -27,7 +32,19 @@
         text-align: center;
         line-height: 1;
         max-width: 100%;
-        margin-top: 90px;
+        margin-top: 150px;
+        @include media-breakpoint-down(xs) {
+            margin-top: 200px;
+        }
+        @media screen and (max-width: 400px) {
+            margin-top: 165px;
+        }
+    }
+    .flex-direction-nav {
+        display: none;
+    }
+    .flex-control-nav {
+        bottom: 0;
     }
 }
 
@@ -35,7 +52,8 @@
     text-align: center;
     top: 50% !important;
     left: 50% !important;
-    transform: translate3d(-50%,-50%, 0);
+    -webkit-transform: translate3d(-50%,-50%, 0);
+            transform: translate3d(-50%,-50%, 0);
     color: $white; 
     text-transform: none;
     font-size: 24px !important;
@@ -45,6 +63,10 @@
         text-transform: uppercase;
         line-height: 1 !important;
     }
+}
+
+#fullwidth-image {
+    padding: 25% 0;
 }
 
 #about {
@@ -105,7 +127,8 @@
     position: relative;
      &:before {
         @include bg-image-frontpage(800px, 800px, left, 50%, 145px);
-        transform: translateX(-55%);
+        -webkit-transform: translateX(-55%);
+                transform: translateX(-55%);
         background-image: url(../../dist/images/tassen-flieder.png);
          opacity: .8;
     }

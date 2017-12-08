@@ -60,8 +60,8 @@ header {
                     max-height: 153px;
                 }
                 @include media-breakpoint-down(xs) {
-                    width: 100%;
-                    height: auto;
+                    max-height: 165px;
+                   
                 }
             }
         }
@@ -83,6 +83,10 @@ header {
             @include media-breakpoint-down(xs) {
                 padding-top: 110px;
             }
+        }
+        @include media-breakpoint-down(xs) {
+            background: chickentheme-color("secondary");
+            
         }
     }
     .navbar-light .navbar-toggler {
